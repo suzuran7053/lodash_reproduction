@@ -7,6 +7,12 @@ const Lodash = {
         } else if (num > up) {
             return up;
         }
+    },
+
+    inRange(num, start, end) {
+        return num > start && num < end;
     }
 
 }
+
+module.exports = Lodash;
