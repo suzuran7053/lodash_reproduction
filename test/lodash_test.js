@@ -4,54 +4,67 @@ const assert = require("assert");
 
 
 describe("Lodash", () => {
+    /* 
+        describe(".clamp", () => {
+            it("return message when string is passed", () => {
+                // Setup
+                const num = "3";
+                const low = 2;
+                const up = 4;
+                const expectedResult = "You need to pass three numbers.";
 
-    describe(".clamp", () => {
-        it("returns 3 when passed 3, 2, 4", () => {
-            // Setup
-            const num = 3;
-            const low = 2;
-            const up = 4;
-            const expectedResult = 3;
+                // Excercise
+                const result = Lodash.clamp(num, low, up);
 
-            // Excercise
-            const result = Lodash.clamp(num, low, up);
+                // Verification
+                assert.strictEqual(result, expectedResult);
+            })
+            it("return 3 when 3, 2, 4 is passed", () => {
+                // Setup
+                const num = 3;
+                const low = 2;
+                const up = 4;
+                const expectedResult = 3;
 
-            // Verification
-            assert.strictEqual(result, expectedResult);
-        })
+                // Excercise
+                const result = Lodash.clamp(num, low, up);
 
-        it("returns 2 when passed 1, 2, 4", () => {
-            // Setup
-            const num = 1;
-            const low = 2;
-            const up = 4;
-            const expectedResult = 2;
+                // Verification
+                assert.strictEqual(result, expectedResult);
+            })
 
-            // Excercise
-            const result = Lodash.clamp(num, low, up);
+            it("return 2 when 1, 2, 4 is passed", () => {
+                // Setup
+                const num = 1;
+                const low = 2;
+                const up = 4;
+                const expectedResult = 2;
 
-            // Verification
-            assert.strictEqual(result, expectedResult);
-        })
+                // Excercise
+                const result = Lodash.clamp(num, low, up);
 
-        it("returns 4 when passed 5, 2, 4", () => {
-            // Setup
-            const num = 5;
-            const low = 2;
-            const up = 4;
-            const expectedResult = 4;
+                // Verification
+                assert.strictEqual(result, expectedResult);
+            })
 
-            // Excercise
-            const result = Lodash.clamp(num, low, up);
+            it("return 4 when 5, 2, 4 is passed", () => {
+                // Setup
+                const num = 5;
+                const low = 2;
+                const up = 4;
+                const expectedResult = 4;
 
-            // Verification
-            assert.strictEqual(result, expectedResult);
-        })
-    })
+                // Excercise
+                const result = Lodash.clamp(num, low, up);
+
+                // Verification
+                assert.strictEqual(result, expectedResult);
+            })
+        }) 
 
 
     describe(".inRange", () => {
-        it("returns true when passed 5, 1, 10", () => {
+        it("return true when 5, 1, 10 is passed", () => {
             const num = 5;
             const start = 1;
             const end = 10;
@@ -61,5 +74,23 @@ describe("Lodash", () => {
 
             assert.strictEqual(result, expectedResult);
         })
-    })
+        it("return true when 4, 8 is passed", () => {
+            const num = 4;
+            const start = 8;
+            const end = undefined;
+            const expectedResult = true;
+
+            const result = Lodash.inRange(num, start, end);
+            assert.strictEqual(result, expectedResult);
+        })
+        it("return false when -3, -2, -6 is passed", () => {
+            const num = -3;
+            const start = -2;
+            const end = -6;
+            const expectedResult = true;
+
+            const result = Lodash.inRange(num, start, end);
+            assert.strictEqual(result, expectedResult);
+        })
+    })*/
 })
