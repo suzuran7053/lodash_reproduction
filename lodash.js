@@ -23,6 +23,10 @@ const Lodash = {
             end = temp;
         }
         return num > start && num < end;
+    },
+
+    words(str){
+        return str.split(" ");
     }
 
 }

@@ -91,6 +91,17 @@ describe("Lodash", () => {
 
             const result = Lodash.inRange(num, start, end);
             assert.strictEqual(result, expectedResult);
+        })      
+    })  */
+
+    describe(".word", () => {
+        it("return ['fred', 'barney', 'pebbles'] when 'fred, barney, pebbles' is passed", () => {
+            const str = 'fred barney pebbles';
+            const expectedResult = ['fred', 'barney', 'pebbles'];
+            const result = Lodash.words(str);
+            assert.deepStrictEqual(result, expectedResult);
         })
-    })*/
+    })
+
+
 })
