@@ -4,50 +4,96 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Lodash Reproduction</title>
+    <title>Lodash Reproduction Playaround</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
     <header>
-        <div class="container mx-auto my-5">
-            <h1 class="text-center">Recreate Challenge - Lodash</h1>
+        <div>
+            <h1>Lodash Reproduction Playaround!</h1>
+        </div>
     </header>
 
     <main>
-        <div class="row my-5">
-            <div class="col">
-                <form action="" method="get">
-                    <div class="form-group">
-                        <label for="param1">Test Number</label><input class="small_input" type="number" id="param1">
+        <div id="bigContainer">
+
+            <!-- clamp(num, low, up) -->
+            <div class="lodashes">
+                <h3>.clamp(num, low, up)</h3>
+                <p>
+                    It returns the number in the middle of the other two numbers. Note that <i>bottom</i> should always be lower than <i>top</i>.
+                    <br> (他の2つの数値の中間に位置する数値を返します。
+                    <i>bottom</i>に<i>top</i>より大きい数は指定できません。）
+                </p>
+                <div>
+                    <div>
+                        <input id="clampNum" type="number" placeholder="num">
                     </div>
-                    <div class="form-group">
-                        <label for="param2">Lower Binder</label><input class="small_input" type="number" id="param2">
+                    <div>
+                        <input id="clampLow" type="number" placeholder="bottom">
                     </div>
-                    <div class="form-group">
-                        <label for="param3">Upper Binder</label><input class="small_input" type="number" id="param3">
+                    <div>
+                        <input id="clampUp" type="number" placeholder="top">
                     </div>
-                    <button type="submit" class="btn btn-default">Click Me</button>
-                </form>
+                    <button id="clampSubmit" class="submit">Try</button>
+                </div>
+                <div>
+                    <p id="clampAnswer" class="answer"></p>
+                </div>
             </div>
 
+            <!-- inRange(num, start, end) -->
+            <div class="lodashes">
+                <h3>.inRange(num, start, end)</h3>
+                <p>
+                    It returns if <i>num</i> is in the middle of <i>start</i> and <i>end</i>. If you set a number into <i>end</i> which is lower than <i>start</i>, they will be exchanged.
+                    <br> <i>num</i>が<i>start</i>と<i>end</i>の間にあるかどうかを調べます。もし<i>start</i>に<i>end</i>よりも大きい数字をセットした場合2つの値は入れ替えて計算されます。
+                </p>
+                <div>
+                    <div>
+                        <input type="number" id="inRangenum" placeholder="num">
+                    </div>
+                    <div>
+                        <input type="number" id="inRangestart" placeholder="start">
+                    </div>
+                    <div>
+                        <input type="number" id="inRangeend" placeholder="end">
+                    </div>
+                    <button id="inRangeSubmit" class="submit">Try</button>
+                </div>
+                <div>
+                    <p id="inRangeAnswer" class="answer"></p>
+                </div>
+            </div>
 
-            <div class="col bg-light">
+            <!-- words(str) -->
+            <div class="lodashes">
+                <h3>.words(str)</h3>
+                <p>This returns ******</p>
+                <div>
+                    <div>
+                        <input type="number" placeholder="str">
+                    </div>
+                    <button id="wordsSubmit" class="submit">Try</button>
+                </div>
+                <div>
+                    <p id="wordsResult" class="answer"></p>
+                </div>
             </div>
 
         </div>
     </main>
 
     <footer>
-        <script type="javascript" src="lodash.js"></script>
-
+        <script src="lodash.js"></script>
+        <script src="script.js"></script>
     </footer>
 
 </body>
